@@ -1,0 +1,80 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://domain.northwind/customer"
+           targetNamespace="http://domain.northwind/customer" elementFormDefault="qualified">
+    
+    <xs:element name="GetCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="customerID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetCustomerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="CreateCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="CreateCustomerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="UpdateCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="UpdateCustomerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Customer" type="tns:Customer"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="DeleteCustomerRequest">
+        <xs:complexType>
+            <xs:sequence>
+               <xs:element name="customerID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="DeleteCustomerResponse">
+        <xs:complexType>
+            <xs:sequence>
+                  <xs:element name="customerID" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="Customer">
+        <xs:sequence>
+            <xs:element name="customerID" type="xs:string"/>
+            <xs:element name="customerName" type="xs:string"/>
+            <xs:element name="phone" type="xs:string"/>
+            <xs:element name="city" type="xs:string"/>
+            <xs:element name="region" type="xs:string"/>
+            <xs:element name="country" type="xs:string"/>
+            <xs:element name="zip" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
