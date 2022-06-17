@@ -54,5 +54,6 @@
 	<modules>
 		<module>soap-service</module>
 		<module>soap-client</module>
+		<module>soap-mTLS-cxf-client</module>
 	</modules>
 </project>
