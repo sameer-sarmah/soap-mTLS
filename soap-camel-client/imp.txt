@@ -1,0 +1,7 @@
+Apache Camel uses Java Security provider SunJSSE
+
+There is a check that if "SunJSSE" is the provider load the default KeyStore i.e $JAVA_HOME/jre/lib/security/cacerts 
+
+Add the server.cer and client.cer certificates to cacerts using commands after opening a terminal in $JAVA_HOME/jre/lib/security/cacerts  
+keytool -import -alias server -keystore cacerts -file /home/I542324/Documents/SSL/server/server.cer
+keytool -import -alias client -keystore cacerts -file /home/I542324/Documents/SSL/certificates/client.cer
